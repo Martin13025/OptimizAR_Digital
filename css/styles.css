@@ -372,3 +372,19 @@ footer {
   margin-bottom: 2rem;
   color: #00f0c9;
 }
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  height: 0;
+  padding-bottom: 56.25%; /* Соотношение 16:9 */
+  margin: 0 auto;
+}
+
+.chart-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
