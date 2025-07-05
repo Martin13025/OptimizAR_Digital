@@ -235,29 +235,51 @@ footer {
 }
 
 .portfolio-section {
-  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.portfolio-section h2 {
   text-align: center;
+  margin-bottom: 2rem;
+  color: #00f0c9;
+  font-size: 2rem;
 }
 
 .portfolio-grid {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.portfolio-item {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 240, 201, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 240, 201, 0.6);
 }
 
 .portfolio-item img {
-  width: 460px;
+  width: 100%;
   height: auto;
-  border-radius: 28px;
+  display: block;
+  border-radius: 15px;
   object-fit: cover;
-  cursor: pointer;
-  box-shadow: 0 8px 20px rgba(0, 240, 201, 0.2);
-  transition: transform 0.3s ease;
 }
 
-.portfolio-item img:hover {
-  transform: scale(1.08);
+
+@media (max-width: 480px) {
+  .portfolio-section h2 {
+    font-size: 1.5rem;
+  }
 }
+
 
 .contact-list {
   list-style: none;
